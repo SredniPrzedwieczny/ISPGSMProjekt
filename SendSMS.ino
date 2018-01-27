@@ -29,7 +29,6 @@ void loop()
 //-----------------------------------------------------
   delay(10000);
 }
-/
 void post(char *body) //POST request
 {
   char httpData[32];
