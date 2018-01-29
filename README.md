@@ -1,7 +1,7 @@
 # ISPGSMProjekt - Inteligentne Systemy Pomiarowe - Projekt 5
 
 ## English description
-ISPGSMProjekt is a project for Arduino embedded platform, meant to utilize the GSM/GPRS module in order to send measurements to the SmartStorm cloud.  
+Project for integrating Arduino board with a SIM800H module with SmartStorm platform using GPRS technology.  
 
 ## Cel projektu
 Stworzyć aplikację pomiarową pozwalającą na komunikację z wykorzystaniem modułu GSM/GPRS. Projekt dotyczy zbudowania urządzenia umożliwiającego zbieranie danych na temat wykrytego ruchu przez czujniki pomiarowe wraz z wysyłaniem informacji do zdefiniowanych odbiorców i umieszczaniem wpisów na serwerze w chmurze.
