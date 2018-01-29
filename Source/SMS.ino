@@ -13,7 +13,7 @@ void recvSMS()
   char resp[255];
   sendCMD("AT+CMGF=1\r\n", resp, 1000); //enter SMS text mode
   sendCMD("AT+CMGR=1\r\n", resp, 1000); //read first message
-  if(strstr(resp, "+48508175071")) //if from specified number, then send next data as SMS to that number
+  if(strstr(resp, "+48111222333")) //if from specified number, then send next data as SMS to that number
   {
     sendSMS=true;
   }
