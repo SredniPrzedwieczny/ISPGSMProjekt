@@ -1,5 +1,5 @@
 int d = 0;
-#define BODY "{\"user_id\": \"klos639@gmail.com\",\"sensor_id\": \"5a6741cfa4408d3a9dde0ba0\",\"desc\" :\"GSM\",\"measure_value\": %d}\r\n"
+#define BODY "{\"user_id\": \"example@gmail.com\",\"sensor_id\": \"5a6741cfa4408d3a9dde0ba0\",\"desc\" :\"GSM\",\"measure_value\": %d}\r\n"
 char toSND[255];
 char resp[255];
 boolean sendSMS = false;
@@ -22,7 +22,7 @@ void loop()
   if(sendSMS)
   {
     sprintf(toSND, "%d", d);
-    sndSMS(toSND, "+48508175071");
+    sndSMS(toSND, "+48111222333");
     sendSMS = false;
   }
   delay(10000);
