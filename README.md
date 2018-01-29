@@ -33,7 +33,7 @@ Wykorzystanie modułów Arduino w projekcie wymusiło wykorzystanie do programow
 
 ## Komunikacja z modułem GSM - komendy AT
 Znane są też jako komendy Hayesa, od nazwy pierwszej firmy, która je zastosowała w swoich produktach. Jest to zbiór standardowych komend, służących do wydawania poleceń modułowi GSM lub do konfiguracji modemu.
-Każda komenda zaczyna się od znaków "AT" i kończy znakiem powrotu karetki oraz nowej linii. W projekcie polecenia te przesyłane są do modułu SIM800H poprzez interfejs UART, realizowany w Arduino programowo.
+Każda komenda zaczyna się od znaków "AT" i kończy znakiem powrotu karetki oraz nowej linii. W projekcie polecenia te przesyłane są do modułu SIM800H poprzez interfejs UART, zrealizowany w Arduino Leonardo sprzętowo na pinach 0 i 1.
 Przykładowe użycie komend AT do wysłania wiadomości SMS:
 
 	AT+CMGF=1\r\n
