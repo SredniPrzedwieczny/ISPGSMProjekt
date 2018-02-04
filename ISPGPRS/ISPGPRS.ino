@@ -11,10 +11,12 @@ void setup()
     delay(1000);
     sendCMD("AT+CSCS=\"GSM\"\r\n",resp,1000);
     configBearer("internet");
-    randomSeed(analogRead(0));
+//    setupSensor();
+    randomSeed(analogRead(0)); //sensor simulated by random number
 }
 void loop()
 {
+//  d = getSensorReading();
   d = random(0,21); //random number to replace sensor reading
   sprintf(toSND, BODY, d);
   post(toSND);
