@@ -35,6 +35,10 @@ void post(char *body) //POST request
   purgeSerial();
   sendCMD(body,resp,1000); //write request text
   sendCMD("AT+HTTPACTION=1\r\n",resp,1000); //http action (0: GET, 1:POST, 2:HEAD)
+  if(!strstr(resp,"200"))
+    notSND = true;
+  else
+    notSND = false;
   sendCMD("AT+HTTPREAD\r\n",resp,1000); //not actually reading anything
   purgeSerial();
   disconnect();

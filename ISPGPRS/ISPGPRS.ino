@@ -1,7 +1,10 @@
 int d = 0;
 #define BODY "{\"user_id\": \"example@gmail.com\",\"sensor_id\": \"5a6741cfa4408d3a9dde0ba0\",\"desc\" :\"GSM\",\"measure_value\": %d}\r\n"
+#define MAX_SEND_TRIES 5
 char toSND[255];
 char resp[255];
+boolean notSND = false;
+int triedToSend = 0;
 boolean sendSMS = false;
 void setup()
 {
@@ -19,7 +22,20 @@ void loop()
 //  d = getSensorReading();
   d = random(0,21); //random number to replace sensor reading
   sprintf(toSND, BODY, d);
-  post(toSND);
+  do
+  {
+    post(toSND);
+    if(notSND)
+    {
+      Serial.println("ERROR - GPRS PACKET NOT SENT");
+      triedToSend++;
+    }
+    while(triedToSend == MAX_SEND_TRIES)
+    {
+      Serial.println("ERROR - REQUESTS LIMIT EXCEEDED");
+      delay(2000);
+    }
+  }while(notSND);
   recvSMS();
   if(sendSMS)
   {
