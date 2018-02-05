@@ -1,7 +1,7 @@
 # ISPGSMProjekt - Inteligentne Systemy Pomiarowe - Projekt 5
 
 ## English description
-Project for integrating Arduino board with a SIM800H module with SmartStorm platform using GPRS technology.  
+Project for integrating Arduino board with a SIM800H module with SmartStorm platform using GPRS technology. Arduino Leonardo is used as platform, and Arduino GPRS Shield with SIM800H module is used for communication. The application sends data read from ultrasonic sensor (substituted by random integer) to sensor registered on the Smartstorm platform and specified in code by user.
 
 ## Cel projektu
 Stworzyć aplikację pomiarową pozwalającą na komunikację z wykorzystaniem modułu GSM/GPRS. Projekt dotyczy zbudowania urządzenia umożliwiającego zbieranie danych na temat wykrytego ruchu przez czujniki pomiarowe wraz z wysyłaniem informacji do zdefiniowanych odbiorców i umieszczaniem wpisów na serwerze w chmurze.
